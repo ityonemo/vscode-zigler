@@ -1,0 +1,34 @@
+{
+  "injectionSelector": "L:source.elixir -comment -text -string",
+  "name": "elixir-zigler",
+  "patterns": [
+    {
+      "comment": "Zigler heredoc with double quotes",
+      "name": "text.zig",
+      "begin": "\\s?(~Z\"\"\")$",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.begin.elixir"
+        },
+        "1": {
+          "name": "string.quoted.double.heredoc.elixir"
+        }
+      },
+      "end": "^\\s*(\"\"\"[a-z]*)$",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.end.elixir"
+        },
+        "1": {
+          "name": "string.quoted.double.heredoc.elixir"
+        }
+      },
+      "patterns": [
+        {
+          "include": "source.zig"
+        }
+      ]
+    }
+  ],
+  "scopeName": "source.elixir.zigler"
+}

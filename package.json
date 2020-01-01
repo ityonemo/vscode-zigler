@@ -1,0 +1,32 @@
+{
+	"name": "vscode-zigler",
+	"displayName": "Zigler: Zig nifs for Elixir",
+	"description": "Syntax highlighting support for Zigler",
+	"version": "0.1.0",
+	"author": "Isaac Yonemoto",
+	"publisher": "ityonemo",
+	"license": "MIT",
+	"icon": "images/logo.png",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ityonemo/vscode-zigler.git"
+	},
+	"engines": {
+		"vscode": "^1.25.1"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"contributes": {
+		"languages": [],
+		"grammars": [
+			{
+				"scopeName": "source.elixir.zigler",
+				"path": "./syntaxes/elixir-zigler.json",
+				"injectTo": [
+					"source.elixir"
+				]
+			}
+		]
+	}
+}
